@@ -8,6 +8,8 @@ using System.Web.UI.WebControls;
 using Microsoft.AspNet.Identity;
 using Microsoft.AspNet.Identity.EntityFramework;
 
+using Microsoft.Owin.Security;
+
 namespace SSBP
 {
     public partial class TEST_LOGIN : System.Web.UI.Page
@@ -29,6 +31,13 @@ namespace SSBP
             if (result.Succeeded)
             {
                 StatusMessage.Text = String.Format("User {0} has been successfully registered", user.UserName);
+                //login new user
+                var authenticationManager = HttpContext.Current.GetOwinContext().Authentication;
+                var userIdentity = manager.CreateIdentity(user, DefaultAuthenticationTypes.ApplicationCookie);
+                authenticationManager.SignIn(new AuthenticationProperties() { }, userIdentity);
+
+                //go to "Login" page
+                Response.Redirect("~/Login.aspx");
             }
             else
             {

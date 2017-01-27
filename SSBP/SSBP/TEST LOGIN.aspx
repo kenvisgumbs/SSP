@@ -20,8 +20,13 @@
         <asp:Label ID="Password" runat="server" Text="Password"></asp:Label>
         <br />
         <asp:TextBox ID="PasswordInput" runat="server" TextMode="Password"></asp:TextBox>
-        <br />  
+        <br />
+        <asp:Label runat="server" AssociatedControlID="ConfirmPasswordInput">Confirm password</asp:Label>
+        <br />
+        <asp:TextBox runat="server" ID="ConfirmPasswordInput" TextMode="Password" />  
+        <br />     
         <asp:Button ID="RegisterButton" runat="server" Text="Register" OnClick="RegisterButton_Click" />
+        <br />
     </div>
     </form>
 </body>

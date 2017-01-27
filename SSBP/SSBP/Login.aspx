@@ -12,7 +12,7 @@
         <asp:PlaceHolder ID="LoginStatusPlaceHolder" runat="server" Visible="false">
             <asp:Literal ID="LoginStatusText" runat="server"></asp:Literal>
         </asp:PlaceHolder>
-        
+
         <br />
 
         <asp:PlaceHolder ID="LoginFormPlaceHolder" runat="server" Visible="false">
@@ -21,7 +21,7 @@
             <br />
             <asp:TextBox ID="UserNameInput" runat="server"></asp:TextBox>
             <br />
-            <asp:Label ID="Password" runat="server" Text="Password"></asp:Label>
+            <asp:Label ID="Password" AssociatedControlID="PasswordInput" runat="server" Text="Password"></asp:Label>
             <br />
             <asp:TextBox ID="PasswordInput" runat="server"></asp:TextBox>
             <br />
@@ -32,6 +32,7 @@
         <asp:PlaceHolder ID="SignOutPlaceHolder" runat="server" Visible="false">
             <asp:Button ID="SignOutButton" runat="server" Text="Sign Out" OnClick="SignOutButton_Click" />
         </asp:PlaceHolder>
+
     </div>
     </form>
 </body>

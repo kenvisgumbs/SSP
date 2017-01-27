@@ -76,6 +76,15 @@ namespace SSBP {
         protected global::System.Web.UI.WebControls.TextBox PasswordInput;
         
         /// <summary>
+        /// ConfirmPasswordInput control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox ConfirmPasswordInput;
+        
+        /// <summary>
         /// RegisterButton control.
         /// </summary>
         /// <remarks>
